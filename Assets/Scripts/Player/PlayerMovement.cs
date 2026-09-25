@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,12 +14,14 @@ public class PlayerMovement : MonoBehaviour
     bool isstarted = false;
     Vector2 Movement;
     [SerializeField] AudioSource _Asource;
+    private bool _canSnap;
 
 
     void OnEnable()
     {
         StartCoroutine(Awaked());
         _rb = GetComponent<Rigidbody2D>();
+        _canSnap = true;
     }
 
     public void Disableit()
@@ -75,9 +78,9 @@ public class PlayerMovement : MonoBehaviour
             Movement = new Vector2(horizontal, vertical);
         _animator.SetFloat("Speed", Movement.sqrMagnitude);
 
-        if (Input.GetKeyDown(key: KeyCode.F))
+        if (Input.GetKeyDown(key: KeyCode.F) && _canSnap)
         {
-            LightManager.Instance.SnapEffected();
+            StartCoroutine(Snapper(0.3f));
         }
         if (Input.GetKeyDown(key:KeyCode.Escape))
         {
@@ -85,4 +88,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private IEnumerator Snapper(float timer)
+    {
+        LightManager.Instance.SnapEffected();
+        _canSnap = false;
+        yield return new WaitForSeconds(timer);
+        _canSnap = true;
+    }
 }
