@@ -10,21 +10,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] Button Start,Exit;
     [SerializeField] AudioClip snap;
     [SerializeField] AudioSource Asource;
+    private void Awake()
+    {
+        Asource.clip = snap;
+    }
 
-    
 
     public void ONStart() => StartCoroutine(OnStarter());
     public void QuitGame ()  => StartCoroutine(Exits());
 
     IEnumerator Exits()
     {
-        Asource.PlayOneShot(snap);
+        
+        Asource.Play();
         yield return new WaitForSeconds(.03f);
         Application.Quit();
     }
     IEnumerator OnStarter()
     {
-        Asource.PlayOneShot(snap);
+        Asource.Play();
         cover.gameObject.SetActive(true);
         cover.gameObject.GetComponent<Animation>().Play();
         yield return new WaitForSeconds(1);
