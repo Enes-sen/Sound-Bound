@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2878790910201275337}
   - component: {fileID: 8933954835645128720}
   - component: {fileID: 915027252252446805}
-  - component: {fileID: 1857837496443671846}
+  - component: {fileID: 5283847615315965411}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Restarter
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scene: 2
---- !u!58 &1857837496443671846
-CircleCollider2D:
+--- !u!60 &5283847615315965411
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,6 +131,27 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0048, y: -0.0044}
-  serializedVersion: 2
-  m_Radius: 0.05531
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.050357528, y: 0.062079705}
+      - {x: 0.011317568, y: 0.060762417}
+      - {x: -0.062143784, y: 0.031039443}
+      - {x: -0.06029865, y: -0.021553222}
+      - {x: -0.030527417, y: -0.06010548}
+      - {x: -0.028270945, y: -0.060641155}
+      - {x: 0.052183032, y: -0.05905173}
+      - {x: 0.05859417, y: -0.040379684}
+      - {x: 0.05245263, y: 0.02302175}
+      - {x: 0.058624495, y: 0.037495617}
+      - {x: 0.051199663, y: 0.049471643}
+  m_UseDelaunayMesh: 0

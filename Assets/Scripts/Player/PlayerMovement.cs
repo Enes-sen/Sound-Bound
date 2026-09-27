@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Disableit()
     {
+        
         _animator.enabled = false;
         _Asource.Stop();
     }
