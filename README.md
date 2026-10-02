@@ -10,9 +10,9 @@
 
 ## 🎮 Oyunun Temel Mekanikleri & Özellikleri
 
-- **Ekolokasyon & Ses Dalgaları (`F Snap`):** Karanlıkta çevrenizi göremediğiniz anlarda `F` tuşu ile şıklatma (Snap) yaparak etrafa ses dalgaları yayırsınız. Yayılan dalgalar çevredeki nesneleri ve duvarları geçici olarak görünür kılar.
+- **Ekolokasyon & Ses Dalgaları (`F Snap`):** Karanlıkta çevrenizi göremediğiniz anlarda `F` tuşu ile şıklatma (Snap) yaparak etrafa ses dalgaları yayırsınız(urp light). Yayılan dalgalar çevredeki nesneleri ve duvarları geçici olarak görünür kılar.
 - **Dinamik Aydınlatma (URP 2D):** Universal Render Pipeline (URP) kullanılarak hazırlanan ışık yönetimi sayesinde ses ve ışık etkileşimli bir atmosfer sunulur.
-- **Etkileşimli Çevre Nesneleri:** İlerlemek için kutuları itin, çukurlardan kaçının ve sonraki seviyeye geçmek için merdivenleri kullanın.
+- **Etkileşimli Çevre Nesneleri:** çukurlardan kaçının ve sonraki seviyeye geçmek için merdivenleri kullanın.
 - **Özel Karakter & Arayüz Animasyonları:** 4 yönlü oyuncu yürüme animasyonları ve özel UI buton etkileşimleri.
 
 ---
